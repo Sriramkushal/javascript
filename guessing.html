@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Guess the Number</title>
+	<style type="text/css">
+		#div1{
+			height: 200px;
+			width: 400px;
+			background-color: purple;
+/*			border-radius: 20px;*/
+		}
+		#p_id{
+			color: white;
+			font-family: cursive;
+		}
+		#inp_id:hover{
+			height: 20px;
+			width: 300px;
+		}
+		#idd{
+			
+		}
+	</style>
+</head>
+<center>
+<body>
+	<div id="div1">
+	<h1>Guess The Number</h1>
+	<p>Your task is to guess the computer generated number</p>
+	<input type="text" name="" value="" id="inp_id">
+	<br>
+	<br>
+	<input type="button" onclick="compare()" name="" value="submit" id="idd">
+	<p id="p_id"></p>
+	</div>
+	<script type="text/javascript">
+		let x = Math.floor((Math.random() * 10) + 1);
+		console.log(x);
+		
+		function compare(){
+			let number = document.getElementById('inp_id').value;
+			if(x == number){
+				document.getElementById('p_id').innerText="Your Guess was Correct";
+			}
+			else if (x>number) {
+				document.getElementById('p_id').innerText="Your Guess was small Not Correct";
+			} else {
+				document.getElementById('p_id').innerText="Your Guess was too large Not Correct";
+			}
+		}
+	</script>
+</body>
+</center>
+</html>

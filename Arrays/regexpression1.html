@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regular Expression</title>
+</head>
+<body>
+	<input type="text" name="" value="" id="inp">
+	<input type="button" name="" value="check Availability" onclick="check()">
+	<p id="success" style="color: red;"></p>
+	<script type="text/javascript">
+		function check()
+		{
+			// body...
+		re=/^[0-9]{10}$/
+		let inp=document.getElementById('inp').value;
+		op1=re.test(inp);
+		if (op1==false)
+		{
+			document.getElementById('success').innerText='false';
+		}
+		else
+		{
+			document.getElementById('success').innerText="True";
+		}
+		}
+	</script>
+</body>
+</html>

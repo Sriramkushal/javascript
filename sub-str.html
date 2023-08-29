@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SubStr Method</title>
+</head>
+<body>
+	<h1>javascript String Methods</h1>
+	<h5 id="text"></h5>
+	<script type="text/javascript">
+		function getstr(str){
+			document.write("<b>"+str+"<b><br>")
+		}
+		name="Full Stack Developement"
+		getstr('substr of string = '+name.substr(0,6));
+		getstr('substr of string = '+name.substr(-6));
+		getstr('substr of string = '+name.substr(-2,4));
+		document.getElementById('text').innerText="substr";
+	</script>
+</body>
+</html>

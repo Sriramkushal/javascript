@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regular Expression</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// let re=/batch/
+		// let output=re.test("Fullstack batch");
+		// console.log(output);
+		// let re=/Batch/;//upper and lower are different
+		// let output=re.test("Fullstack batch");
+		// console.log(output);
+		// let re=/Batch/i;//i compares for both upper and lower
+		// let output=re.test("Fullstack batch");
+		// console.log(output);
+		// let re=/^f/i;//^checks first element
+		// let output=re.test("Fullstack batch");
+		// console.log(output);
+		// let a="batch";
+		// let re1=new RegExp({a})
+		// output=re1.test("fullstack batch");
+		// console.log(output);
+		let re=/batch/g;
+		res=re.exec("fullstack morning batch");
+		console.log(res);
+		console.log(res.index);
+		// res=re.exec("fullstack morning batch");
+		// console.log(res.index);
+		re=/^[0-9]{10}/
+		op1=re.test("8600361116");
+		op=re.test("9652699639");
+		console.log(op)
+		console.log(op1)
+		re=/^[0-9]{10}$/
+		op2=re.test("86003611163");//$checks the length of the number paced in{}
+		op3=re.test("96526996393");
+		console.log(op2)
+		console.log(op3)
+	 </script>
+</body>
+</html>

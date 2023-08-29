@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multiplication</title>
+	<style type="text/css">
+		div{
+			border: 2px solid green ;
+			height: 250px;
+			width: 800px;
+			padding: 20px;
+			text-align: center;
+			background: lavender;
+			margin-top:50px ;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		Enter the value:-<input type="" name="num" id="guess">
+		<input type="button" onclick="compare()" name="" value="submit" id="sub">
+		<p id="p_id"></p>
+	</div>
+	<script type="text/javascript">
+		function compare()
+		{
+			let x=document.getElementById('guess').value;
+			for (var i = 1; i <= 10; i++) 
+			{
+				// document.getElementById('p_id').innerText=x+" X "+i+" = "+x*i;
+				// console.log(x+" * "+i+" = "+x*i)
+				document.write(x+" X "+i+" = "+x*i+"</br>")
+			}
+	    }
+	</script>
+</body>
+</html>

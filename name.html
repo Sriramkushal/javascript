@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Keyboard Events</title>
+</head>
+<body>
+		<label>Name :-</label>
+		<input type="text" name="" value="" id="btn_id" >
+		<br>
+		<span id="s_id"></span>
+	<script type="text/javascript">
+		let btn=document.getElementById('btn_id');
+		btn.style.border='3px solid red'
+		btn.onmouseover=mouse
+		function mouse() {
+			document.getElementById('s_id').innerText="enter name"
+		}
+	</script>
+</body>
+</html>

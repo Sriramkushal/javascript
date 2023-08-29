@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mouse Events</title>
+</head>
+<body>
+	<button id="btn_id">click here</button>
+	<script type="text/javascript">
+		let btn=document.getElementById('btn_id');
+		btn.onclick=click
+		function click() {
+			// body...
+			document.body.style.background='red';
+		}
+		btn.ondblclick=dblclick
+		function dblclick(){
+			document.body.style.background='blue'
+		}
+		btn.onmouseover=mouse
+		function mouse() {
+			// body...
+			document.body.style.background='lightgreen'
+			// <img src="./Events/images/1.jpg" style="height:200px;width:220px" >
+		}
+		btn.onmouseout=out
+		function out() {
+			// body...
+			document.body.style.background='white'
+		}
+	</script>
+</body>
+</html>

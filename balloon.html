@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Baloon</title>
+</head>
+<body>
+	<center>
+		<div style="height: 450px;width: 300px; border: 1px solid red;">
+			<img src=" "id="res" style="height: 450px;width: 300px;" onmouseover="func1()" onmouseout="func2()">
+		</div>
+	</center>
+	<script type="text/javascript">
+		function func1() {
+			// body...
+			document.getElementById('res').src='./Events/images/emptybaloon.jpg'
+		}
+		function func2(){
+			document.getElementById('res').src='./Events/images/baloon.jpg'
+		}
+	</script>
+</body>
+</html>

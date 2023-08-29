@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<center>
+		<div style="height: 400px;width: 350px;border: 1px solid red;float: left;">
+			<img  id="res" style="height:400px;width:350px"onmouseover="func1()" onmouseout="func2()">
+		 </div>
+	</center>
+	<script type="text/javascript">
+		function func1()
+		{
+		document.getElementById('res').src='https://img.freepik.com/free-photo/birthday-chocolate-cake-with-colored-candles-blue-background-ai-generative_123827-24050.jpg?size=626&ext=jpg&ga=GA1.2.1708446170.1691214533&semt=sph';
+		}
+		function func2()
+		{
+			// document.body.style.background='pink'
+			document.getElementById('res').src='https://img.freepik.com/free-photo/freshly-baked-homemade-berry-pie-rustic-wood-generated-by-ai_188544-33406.jpg?size=626&ext=jpg&ga=GA1.2.1708446170.1691214533&semt=sph';
+		}
+	</script>
+</body>
+</html>
+

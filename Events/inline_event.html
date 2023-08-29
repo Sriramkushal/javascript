@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inline Event Handler</title>
+</head>
+<body>
+	<!-- first  way -->
+	<!-- <button onclick="text()">click me</button>
+	<script type="text/javascript">
+		function text() {
+			// body...
+			document.write("hello")
+			document.body.style.background='skyblue'
+		}
+	</script> -->
+	<!-- *********************************************************** -->
+	<!-- second way -->
+	<!-- <button id="btn_id">Click here</button>
+	<script type="text/javascript">
+		let btn=document.getElementById('btn_id');
+		btn.onclick=function(){
+			alert("hi")
+			document.body.style.background='lightgreen'
+		}
+	</script> -->
+	<!-- Third way -->
+	<!-- <button id="btn_id">Click here</button>
+	<script type="text/javascript">
+		let btn=document.getElementById('btn_id')
+		btn.addEventListener('click',test)
+		function test(){
+			alert("testing")
+			document.body.style.background='red'
+		}
+	</script> -->
+	<!-- Anonymous Function(No function name) -->
+	<!-- <button id="btn_id">Click here</button>
+	<script type="text/javascript">
+		let btn=document.getElementById('btn_id')
+		btn.addEventListener('click',function (){
+			alert("testing")
+			document.body.style.background='lightyellow'
+		})
+	</script> -->
+	<button id="btn_id">Hide</button>
+	<button id="btn_id1">show</button>
+	<p id="sp_id">Sriram Kushal</p>
+	<script type="text/javascript">
+		let btn=document.getElementById('btn_id')
+		let btn1=document.getElementById('btn_id1')
+		btn.addEventListener('click',function(){
+			document.getElementById('sp_id').style.display='none';
+		})
+			btn1.addEventListener('click',function(){
+			document.getElementById('sp_id').style.display='block';
+		})
+	</script>
+</body>
+</html>

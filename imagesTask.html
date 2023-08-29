@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Task</title>
+	<style type="text/css">
+		img{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	
+	<div style="height:250px;width: 1000px;padding: 15px;border: 1px solid red;">
+		<div style="height: 200px;width: 700px;border: 1px solid red;float: left;padding: 3px;">
+			<div style="height: 200px;width: 220px;border: 1px solid red;float: left;padding-right: 7px;">
+				<img src=" " style="height:200px;width:220px" 
+				onmouseover="click1()" >
+			</div>
+			<div style="height: 200px;width: 220px;border: 1px solid red;float: left;">
+				<img src="./Events/images/2.jpg" style="height:200px;width:220px"
+				onclick="click2()">
+			</div>
+			<div style="height: 200px;width: 240px;border: 1px solid red;float: right;">
+				<img src="./Events/images/3.jpg" style="height:200px;width:240px"
+				onclick="click3()">
+			</div>
+        </div>
+		<div style="height: 230px;width: 250px;border: 1px solid red;float: right;">
+			<img  id="res" style="height:230px;width:250px">
+		 </div>
+	</div>
+	<script type="text/javascript">
+		function click1()
+		{
+			// let v=document.getElementsByTagName('img');
+		document.getElementById('res').src='./Events/images/1.jpg';
+		}
+		function click2()
+		{
+			// let v=document.getElementsByTagName('img');
+		document.getElementById('res').src='./Events/images/2.jpg';
+		}
+		function click3()
+		{
+			// let v=document.getElementsByTagName('img');
+		document.getElementById('res').src='./Events/images/3.jpg';
+		}
+	</script>
+</body>
+</html>

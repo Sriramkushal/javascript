@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Increment-Decrement</title>
+</head>
+<body>
+	<button onclick="incby1()">Next pic</button>
+	<button onclick="decby1()">Previous pic</button>
+	<p id="output_id"></p>
+	<script type="text/javascript">
+		var i=1;
+		function incby1(){
+			if(i<6){
+			document.getElementById('output_id').innerHTML="<img src='images/"+res+".jpg style='width:200px;height:200px'/>"
+		}
+		}	
+		// }
+		// function decby1(){
+		// 	document.getElementById('output_id').innerText=i--
+		// }
+	</script>
+</body>
+</html>

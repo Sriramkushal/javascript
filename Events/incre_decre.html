@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Increment-Decrement</title>
+</head>
+<body>
+	<button onclick="incby1()">Increment</button>
+	<button onclick="decby1()">Decrement</button>
+	<p id="output_id"></p>
+	<script type="text/javascript">
+		var i=1;
+		function incby1(){
+			document.getElementById('output_id').innerText=i++;
+			
+		}
+		function decby1(){
+			document.getElementById('output_id').innerText=i--
+		}
+	</script>
+</body>
+</html>

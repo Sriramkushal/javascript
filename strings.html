@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Js string</title>
+</head>
+<body>
+	<h3>String Methods</h3>
+	<table border="" cellspacing="0px">
+		<td>d</td>
+		<td>r</td>
+		<td>i</td>
+		<td>v</td>
+		<td>e</td>
+		<td>&nbsp;</td>
+		<td>r</td>
+		<td>e</td>
+		<td>a</td>
+		<td>d</td>
+		<td>y</td>
+		<tr>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>-11</td>
+			<td>-10</td>
+			<td>-9</td>
+			<td>-8</td>
+			<td>-7</td>
+			<td>-6</td>
+			<td>-5</td>
+			<td>-4</td>
+			<td>-3</td>
+			<td>-2</td>
+			<td>-1</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		let str = 'Full Stack'
+		let str1 = new String('Full Stack')
+		document.write(str," ")
+		document.write(str[0]," ")
+		document.write(typeof(str))
+		document.write("<br>")
+		document.write(typeof(str1),"<br>")
+		function getstr(str){
+			document.write("<b>"+str+"<b><br>")
+		}
+		let name = 'Drive ready'
+		getstr("Original String = "+name)
+		getstr("String length = "+name.length)
+		getstr("Char At = "+name.charAt(2))
+		getstr("Index of = "+name.indexOf('v'))
+		getstr("Index of = "+name.indexOf('ready'))
+		getstr("Last Index = "+name.lastIndexOf('d'))
+		getstr("To uppercase = "+name.toUpperCase())
+		getstr("To lowercase = "+name.toLowerCase())
+		name2=' Morning Batch'
+		name3= ' full stack'
+		getstr("for concatenation = "+name.concat(name2,name3))
+		getstr("To trim spaces = "+name3.trim());
+		name4 = 'sasi vardhan'
+		console.log(name4.startsWith('s'))
+		console.log(name4.startsWith('t'))
+		console.log(name4.endsWith('s'))
+		console.log(name4.endsWith('n'))
+		//slicing
+		getstr('Slicing of the string = '+name.slice(-5,-1))
+		getstr(name.slice(6,10))
+
+		//Substring 
+		getstr('substring of string = '+name.substring(1,5));
+		getstr('substring of string = '+name.substring(5,1));
+		getstr('substring of string = '+name.substring(-1));
+		//substr
+		//1st value-starting index value and 2nd value-length of the string
+		getstr('substr of string = '+name.substr(2,6));
+		getstr('substr of string = '+name.substr(-6));
+		getstr('substr of string = '+name.substr(-2,4));
+		//repeate string
+		getstr('repeate of strings = '+name.repeat(2));
+		//replace strings
+		getstr('replace of strings = '+name.replace('ready','coures'));
+		
+	</script>
+	
+</body>
+</html>

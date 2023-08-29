@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		array methods
+	</title>
+</head>
+<body>
+	<center><h2>A LIST OF </h2></center> 
+       <center><h2>JAVASCRIPT ARRAY METHODS</h2></center>
+	<script type="text/javascript">
+// Sample array
+const Array = ['FSD', 'AL&ML', 'PEGA', 'DEVOPS', 'AWS'];
+document.write('original Array:-'+Array)
+document.write("<br>")
+//Reversal of an array
+document.write("ReversalArray is:"+Array.reverse())
+document.write("<br>")
+//Array sorting:
+document.write("sortedArray is:"+Array.sort())
+document.write("<br>")
+// Method 1: push() - Add an element to the end of the array
+Array.push('FLUTTER ');
+document.write('push():', Array);
+document.write("<br>")
+
+// Method 2: pop() - Remove and return the last element of the array
+const popped = Array.pop();
+document.write('pop():', popped, Array);
+document.write("<br>")
+
+// Method 3: unshift() - Add an element to the beginning of the array
+Array.unshift('AR-VR');
+document.write('unshift():', Array);
+document.write("<br>")
+
+// Method 4: shift() - Remove and return the first element of the array
+const shifted = Array.shift();
+document.write('shift():', shifted, Array);
+document.write("<br>")
+
+// Method 5: concat() - Concatenate two arrays
+const moreArray = ['GOOGLE', 'FLUTTER'];
+const allArray = Array.concat(moreArray);
+document.write('concat():', allArray);
+document.write("<br>")
+
+// Method 6: join() - Join all elements of an array into a string
+const Arraystring = Array.join(', ');
+document.write('join():', Arraystring);
+document.write("<br>")
+
+// Method 7: slice() - Create a new array by extracting a portion of an existing array
+const slicedArray = Array.slice(1, 3); // Extracts elements at index 1 and 2
+document.write('slice():', slicedArray);
+document.write("<br>")
+
+// Method 8: splice() - Change the contents of an array by removing or replacing elements
+const removedArray = Array.splice(2, 2, '4X', 'T100'); // Removes two elements starting from index 2 and adds
+document.write('splice() - Removed:', removedArray);
+document.write("<br>")
+document.write('Array:', Array)
+document.write("<br>")
+
+// Method 9: indexOf() - Find the index of an element in the array
+const index = Array.indexOf('FSD');
+document.write('indexOf():', index);
+document.write("<br>")
+
+// Method 10: lastIndexOf() - Find the last index of an element in the array
+const lastIndexOfDate = Array.lastIndexOf('date');
+document.write('lastIndexOf():', lastIndexOfDate);
+document.write("<br>")
+
+// Method 11: includes() - Check if an element exists in the array
+const has = Array.includes('AWS');
+document.write('includes():', has);
+document.write("<br>")
+
+// Method 12: forEach() - Execute a function for each element in the array
+document.write('forEach():');
+Array.forEach(Array => {
+  document.write(Array);
+  document.write("<br>")
+});
+
+// Method 13: map() - Create a new array by applying a function to each element in the array
+const capitalizedArray = Array.map(Array => Array.toUpperCase());
+document.write('map():', capitalizedArray);
+document.write("<br>")
+
+// Method 14: filter() - Create a new array with elements that pass a test
+const longArray = Array.filter(Array => Array.length > 3);
+document.write('filter():', longArray);
+document.write("<br>")
+
+// Method 15: reduce() - Reduce the array to a single value through a function
+const totalLength = Array.reduce((total, Array) => total + Array.length, 0);
+document.write('reduce():', totalLength);
+document.write("<br>")
+
+let res=Array.some((ele,i,index) =>ele==450);
+document.write('some():', res);
+document.write("<br>")
+
+</script>
+
+</body>
+</html>

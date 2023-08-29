@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS activity 2</title>
+    <link rel="stylesheet" type="text/css" href="task.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        .heading{
+    width: 75%;
+    height: 50px;
+}
+.heading1{
+    width: 45%;
+    height: 50px;
+    float: left;
+}
+.heading2{
+    width: 55%;
+    height: 50px;
+    float: right;
+    padding-top: 25px;
+}
+.myTable{
+    top: 100px;
+}
+    </style>
+</head>
+<body>
+  <center>
+    <div class="heading">
+      <div class="heading1"><p style="font-size: 25px; font-family: italic;">Product <b>Details</b></p></div>
+      <div class="heading2"><button onclick="addRow()"><i class="fa-solid fa-plus" style="color: #877878;"></i> Add New</button></div>
+    </div>
+    <table id="myTable" border="" width="50%">
+        <tr>
+            <th style=" font-family: sans-serif;">product id</th>
+            <th style=" font-family: sans-serif;">Name</th>
+            <th style=" font-family: sans-serif;">Price</th>
+            <th style=" font-family: sans-serif;">Actions</th>
+        </tr>
+        <tr>
+            <td>123456</td>
+            <td>Relame mobile</td>
+            <td>50,000</td>
+            <td><button onclick="editRow(this)"  style="background-color: white;"><i class="fa-solid fa-pencil" style="color: #d58920;"></i></button><button onclick="deleteRow(this)"  style="background-color: white;"><i class="fa-sharp fa-solid fa-trash" style="color: #d43c2b;"></i></button></td>
+        </tr>
+        <tr>
+            <td>987654</td>
+            <td>poco mobile</td>
+            <td>11000</td>
+            <td><button onclick="editRow(this)" style="background-color: white;"><i class="fa-solid fa-pencil" style="color: #d58920;"></i></button><button onclick="deleteRow(this)" style="background-color: white;"><i class="fa-sharp fa-solid fa-trash" style="color: #d43c2b;"></i></button></td>
+        </tr>
+         <tr>
+            <td>963852</td>
+            <td>oneplus mobile</td>
+            <td>35000</td>
+            <td><button onclick="editRow(this)" style="background-color: white;"><i class="fa-solid fa-pencil" style="color: #d58920;"></i></button><button onclick="deleteRow(this)" style="background-color: white;"><i class="fa-sharp fa-solid fa-trash" style="color: #d43c2b;"></i></button></td>
+        </tr>
+    </table>
+    <script>
+        function addRow() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(table.rows.length);
+            var cell0 = row.insertCell(0);
+            var cell1 = row.insertCell(1);
+            var cell2= row.insertCell(2);
+             var cell3 = row.insertCell(3);
+              cell0.innerHTML = "<input type='text'>";
+            cell1.innerHTML = "<input type='text'>";
+            cell2.innerHTML = "<input type='text'>";
+            cell3.innerHTML = "<button onclick='saveRow(this)'>Save</button><button onclick='deleteRow(this)'>Delete</button>";
+        }
+
+        function editRow(button) {
+            var row = button.parentNode.parentNode;
+            var cells = row.getElementsByTagName("td");
+            for (var i = 0; i < cells.length - 1; i++) {
+                cells[i].innerHTML = "<input type='text' value='" + cells[i].innerText + "'>";
+            }
+            cells[cells.length - 1].innerHTML = "<button onclick='editRow(this)'>Save</button><button onclick='deleteRow(this)'>Delete</button>";
+            cells[cells.length - 1].innerHTML = "<button onclick='saveRow(this)'>Save</button><button onclick='deleteRow(this)'></button>";
+        }
+
+        function saveRow(button) {
+            var row = button.parentNode.parentNode;
+            var cells = row.getElementsByTagName("td");
+            for (var i = 0; i < cells.length - 1; i++) {
+                cells[i].innerHTML = cells[i].getElementsByTagName("input")[0].value;
+            }
+            cells[cells.length - 1].innerHTML = "<button onclick='editRow(this)'>Edit</button><button onclick='deleteRow(this)'>Delete</button>";
+        }
+
+        function deleteRow(button) {
+           var q= confirm('Do you want to delete the record')
+            if (q==true) {
+                var row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+            }
+        }
+    </script>
+  </center>
+</body>
+</html>

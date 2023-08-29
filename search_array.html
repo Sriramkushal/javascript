@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Search Element </title>
+</head>
+<body>
+	<input type="text" placeholder="Enter the name to search" id="sea">
+	<button onclick="getcnt()">Find count</button>
+	<p id="p_id"></p>
+	<script type="text/javascript">
+		function getcnt()
+		{
+			let arr=['sriram','anuhya','amma','dad','amma'];
+			let search=document.getElementById('sea').value;
+			let cnt=0;
+			for (var i = 0; i < arr.length; i++) {
+				if(arr[i].includes(search)==true)
+				{
+					cnt=cnt+1;
+				}
+				document.getElementById('p_id').innerText="count = "+cnt;
+			}
+		}
+	</script>
+</body>
+</html>

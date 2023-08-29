@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spread Operators</title>
+</head>
+<body>
+	<h2>Spread Operators</h2>
+	<p>It takes an iteration and expands or seperates each element</p>
+	<p>Notation...(3 Dots)</p>
+	<script type="text/javascript">
+		// let arr=[13,24,46,6,80];//(...dots is spread operator)
+		// console.log(...arr);
+		// //2nd way
+		// console.log(2,3,arr)
+		// console.log(2,3,...arr)
+		let s='DriveReady';
+		console.log(s);
+		console.log(...s)
+		//string to Array
+		let b=[...s] 
+		console.log(b)
+		console.log(b[3])
+		let arr1=[2,32,5,25,71,33]
+		let arr2=[21,43,25,46,66,6]
+		console.log(arr1,arr2)
+		console.log(...arr1,...arr2)
+		console.log(...arr1,0,0,0,...arr2)
+		let arr4=[1,2,3,4]
+		function add(a,b,c,d) {
+			// body...
+			console.log(a+b+c+d)
+		}
+		add(...arr4)
+	</script>
+</body>
+</html>

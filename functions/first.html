@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Functions</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//function with no argument
+		function test() {
+			document.write("hello World");
+		}
+		//test()
+		//function with one argument
+		function power(a) {
+			document.write(a**2);
+		}
+		//power(3)
+		//var a=prompt("Scan your id here");
+		//alert('id Scan');
+		function scanyourid(rollno) {
+			document.write(rollno);
+		}
+		//scanyourid(a)
+		// var a=prompt("Enter Your 1st Number here");
+		// var b=prompt("Enter Your 2nd Number here");
+		// function add(a,b) {
+		// 	return (parseInt(a)+parseInt(b));
+		// }
+		// document.write(add(a,b));
+		// function multiply(a,b)
+		// {
+		// 	return (a*b);
+		// }
+		// document.write(multiply(2,3));
+		//anonymous function
+		// var a=function(a,b)
+		// {
+		// 	return a*b
+		// }
+		// document.write(a(3,2))
+
+		// function cube(a)
+		// {
+		// 	for (var i =1; i<=a; i++) {
+		// 		document.write(i*i*i,"</br>");
+		// 	}
+		// }
+		// cube(5);
+		// add = (a,b) =>{
+		// //arrow functions doesnt have function keyword in declaration of a function
+		// 	document.write(a+b)
+		// }
+		// add(6,7)
+		// getname =a=>
+		// {
+		// 	//arrow functions doesnt have function keyword in declaration of a function
+		// 	document.write("Hello "+a)
+		// }
+		// getname('Sriram')
+		//arrow functions without arguments in two ways
+		// test=_=>{
+		// 	document.write("Hello World");
+		// }
+		// test();
+
+		// test= ()=>{
+		// 	document.write("Hello World");
+		// }
+		// test();
+
+		// setTimeout(function()
+		// {
+		// 	document.write("This will print after certain time")
+		// },1000)
+
+		//callback function is a function in which the one of the argument is a function
+
+		setTimeout(test1,2000);
+		function test1()
+		{
+			document.write("FullStack");
+		}
+		
+	</script>
+</body>
+</html>

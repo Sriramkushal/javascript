@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SubStr Method</title>
+</head>
+<body>
+	<h1>javascript String Methods</h1>
+	<h5 id="text"></h5>
+	<script type="text/javascript">
+		function getstr(str){
+			document.write("<b>"+str+"<b><br>")
+		}
+		name="Full Stack Developement";
+		document.write("Substr<br>")
+		getstr('substr of string = '+name.substr(0,6));
+		getstr('substr of string = '+name.substr(-6));
+		getstr('substr of string = '+name.substr(-2,4));
+		document.write("<br>Substring<br><br>")
+		getstr('substring of string = '+name.substring(1,5));
+		getstr('substring of string = '+name.substring(5,1));
+		getstr('substring of string = '+name.substring(-1));
+		document.write("<br>replace string<br><br>")
+		document.write(name);
+		getstr('<br>replace of strings = '+name.replace('Developement','Developer'));
+		document.write("<br>search string<br><br>")
+		getstr('searchof string = '+name.search('D'));
+		document.write("<br>toLowerCase string<br><br>")
+		getstr("To lowercase = "+name.toLowerCase())
+		document.write("<br>toUpperCase string<br><br>")
+		getstr("To Uppercase = "+name.toUpperCase())
+		document.write("<br>Index Of string<br><br>")
+		getstr("Index of = "+name.indexOf('ready'))
+		document.write("<br>Includes Of string<br><br>")
+		getstr("Includes of = "+name.includes('Full'))
+		document.write("<br>Slice Of string<br><br>")
+		getstr("Slice of = "+name.slice(0,4))
+		document.write("<br>concatenation Of string<br><br>")
+		name2=' Morning Batch'
+		name3= ' full stack'
+		getstr("for concatenation = "+name.concat(name2))
+		document.write("<br>LastIndex Of string<br><br>")
+		getstr("Last Index = "+name.lastIndexOf('D'))
+		document.write("<br>Ascii Of character<br><br>")
+		getstr("Ascii of character-D = "+name.charCodeAt('D'))
+		document.write("<br>Trim Of string<br><br>")
+		getstr("To trim spaces = "+name.trim());
+		document.write("<br>CharAt Of string<br><br>")
+		getstr("CharAt of string = "+name.charAt(0));
+		document.write("<br>Value Of character<br><br>")
+		getstr("Value of = "+name.valueOf(1));
+		document.write("<br>Split Of string<br><br>")
+		getstr("To get spaces = "+name.split(" "));
+		document.write("<br>To string<br><br>")
+		let arr=55
+		getstr("To get String = "+arr.toString());
+		document.write("<br>match<br><br>")
+		getstr("Match="+name.match("Full"))
+	</script>
+</body>
+</html>

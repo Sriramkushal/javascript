@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Float</title>
+</head>
+<center>
+<body>
+	<img src="" alt="img" id="img_id">
+
+	<script type="text/javascript">
+		function timeinterval(){
+			setInterval(moving,1000);
+		}
+		var arr=[
+		 	"images/1.jpg",	
+			"images/2.jpg",
+			"images/3.jpg",
+			"images/4.jpg", 
+			"images/5.jpg"
+			]
+		let image=document.getElementById('img_id');
+		currentIndex=0;
+		function moving(){
+			 image.src = arr[currentIndex];
+  			currentIndex = (currentIndex + 1) % arr.length;
+	}
+	timeinterval();
+	</script>
+
+</body>
+</center>
+</html>
